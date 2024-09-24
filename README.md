@@ -1,2 +1,2 @@
 # TestingQA2024
-Software Testing QA Spring Semester
+Software Testing QA Fall Semester

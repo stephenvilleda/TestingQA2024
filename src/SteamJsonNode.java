@@ -22,8 +22,7 @@ public class SteamJsonNode {
     }
 
     public String getGameName() {
-        String name = root.get(appID).get("data").get("name").asText();
-        return name;
+        return root.get(appID).get("data").get("name").asText();
     }
 
     public String[] getGamePlatforms() {

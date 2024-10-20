@@ -27,16 +27,17 @@ public class Game {
 
 
     public void printGame() {
-        System.out.println(Arrays.toString(this.platforms));
-        System.out.println(this.name);
-        System.out.println(this.releaseDate);
-        System.out.println(Arrays.toString(this.developers));
-        System.out.println(Arrays.toString(this.genres));
+        System.out.printf("Platform: %s\n", (Arrays.toString(this.platforms)));
+        System.out.printf("Name: %s\n", this.name);
+        System.out.printf("Release Date: %s\n", (this.releaseDate));
+        System.out.printf("Developers: %s\n", (Arrays.toString(this.developers)));
+        System.out.printf("Genres: %s\n", (Arrays.toString(this.genres)));
         String priceString = Integer.toString(this.price);
         String prettyPrice = "$" + priceString.substring(0, priceString.length() - 2) +
                 "." + priceString.substring(priceString.length() - 2);
-        System.out.println(prettyPrice);
-        System.out.println("");
+        System.out.printf("Price: %s\n", (prettyPrice));
+        System.out.printf("Rating: %s\n", (Arrays.toString(this.rating)));
+        System.out.println("---------------------------------------------");
     }
 
     public String getAppID() {

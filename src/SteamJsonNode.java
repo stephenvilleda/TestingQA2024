@@ -72,10 +72,12 @@ public class SteamJsonNode {
     }
 
     public String[] getRating() {
-        //TODO
-        
-        return null;
+        ArrayList<String> ratings = new ArrayList<>();
+        JsonNode ratingsNode = root.get(appID).get("data").get("ratings").get("esrb");
+        for (int i = 0; i < 1; i++) {
+            ratings.add(ratingsNode.get("rating").asText());
+            i++;
+        }
+        return ratings.toArray(new String[ratings.size()]);
     }
-
-
 }

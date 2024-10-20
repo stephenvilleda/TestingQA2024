@@ -19,7 +19,7 @@ public class MainTest {
 
     @Test
     public void testGameName() {
-        String name = GameUtility.getGameName("23423423423");
+        String name = GameUtility.getGameName("1850570");
         System.out.println(name);
     }
 

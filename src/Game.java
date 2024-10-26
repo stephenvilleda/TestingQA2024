@@ -101,10 +101,15 @@ public class Game {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        Game game = (Game) object;
-        return price == game.price && Objects.equals(appID, game.appID) && Objects.equals(name, game.name) && Arrays.equals(platforms, game.platforms) && Objects.equals(releaseDate, game.releaseDate) && Arrays.equals(developers, game.developers) && Arrays.equals(genres, game.genres) && Arrays.equals(rating, game.rating);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Game)) return false;
+        Game game = (Game) o;
+        return Objects.equals(appID, game.appID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(appID);
     }
 }

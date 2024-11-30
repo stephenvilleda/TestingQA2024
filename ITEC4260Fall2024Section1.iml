@@ -26,5 +26,17 @@
     <orderEntry type="library" name="apache.commons.lang3" level="project" />
     <orderEntry type="library" name="seleniumhq.selenium.java" level="project" />
     <orderEntry type="library" name="seleniumhq.selenium.java1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://C:/SQlite" />
+        </NATIVE>
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="xerial.sqlite.jdbc" level="project" />
+    <orderEntry type="library" name="pl.pragmatists.JUnitParams" level="project" />
   </component>
 </module>

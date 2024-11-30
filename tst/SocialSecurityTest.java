@@ -114,7 +114,7 @@ public class SocialSecurityTest {
 
     /*
     QUESTION 3
-    average salary is 52264
+    average salary is $52264
      */
 
     @Parameters({"1, 1, 1990, 17, 52264, 0", "1, 1, 1990, 27, 52264, 1"})
@@ -165,10 +165,10 @@ public class SocialSecurityTest {
         String estimate = fra.getText().replace("$", "").replace(",", "");
         double a = Double.parseDouble(estimate);
         if(ten.equals("0")) {
-            System.out.printf("Working early and retiring makes $%.2f dollars a month\n", a);
+            System.out.printf("Working early and retiring makes $%.2f a month\n", a);
         }
         else {
-            System.out.printf("Working 10 years later and retiring makes $%.2f dollars a month\n", a);
+            System.out.printf("Working 10 years later and retiring makes $%.2f a month\n", a);
             System.out.print("Not much of a significant difference");
         }
     }

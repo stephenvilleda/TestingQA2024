@@ -45,18 +45,18 @@ public class OrderManagerTest {
         //***
         //GIVEN - setup mock and define expected behavior
         //***
-        Mockito.doThrow(new InvalidOrderException()).when(processorMock).shipOrder(666);
+        Mockito.doThrow(new InvalidOrderException()).when(processorMock).shipOrder(1337);
 
         //***
         //WHEN - have the mock object do something (that you want to test)
         //***
-        boolean result = orderManager.processOrder(666);
+        boolean result = orderManager.processOrder(1337);
 
         //***
         //THEN - verify expected result
         //***
         Assert.assertFalse(result);
-        Mockito.verify(processorMock).shipOrder(666);
+        Mockito.verify(processorMock).shipOrder(1337);
         Mockito.verifyNoMoreInteractions(processorMock);
     }
 

@@ -1,4 +1,4 @@
-fpublic class Order {
+public class Order {
 
     int id;
     String customerName;

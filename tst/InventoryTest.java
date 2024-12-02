@@ -2,6 +2,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mockito;
 
 public class InventoryTest {
 
@@ -93,4 +95,23 @@ public class InventoryTest {
         System.out.print("The average price of all games is: ");
         System.out.println(inventory.printAverageOfGames());
     }
+
+    @Test
+    public void testInventoryMock() {
+        Inventory myInventory = Mockito.mock(Inventory.class);
+        myInventory.add(new Game("2379780"));
+        myInventory.add(new Game("646570"));
+        Mockito.when(myInventory.getSize()).thenReturn(10);
+        myInventory.getSize();
+
+        Mockito.verify(myInventory).getSize();
+        Mockito.verify(myInventory, Mockito.times(2)).add(Mockito.any(Game.class));
+        Mockito.verifyNoMoreInteractions(myInventory);
+
+        InOrder inOrder = Mockito.inOrder(myInventory);
+        inOrder.verify(myInventory, Mockito.times(2)).add(Mockito.any(Game.class));
+        inOrder.verify(myInventory).getSize();
+        inOrder.verifyNoMoreInteractions();
+    }
+
 }

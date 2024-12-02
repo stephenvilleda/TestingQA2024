@@ -21,11 +21,11 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="hotels" uuid="47d8732f-3f01-4cab-80e4-6a2ec512cdb5">
+    <data-source source="LOCAL" name="hotels" uuid="ac3dced9-caed-41dd-ab79-82ca3329a9cc">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Steph\Downloads\hotels.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Steph\Desktop\hotels.sqlite</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>

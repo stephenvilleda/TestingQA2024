@@ -78,10 +78,12 @@ public class OrderManagerTest2 {
 
     @Test
     public void testOrderFromBannedCustomer() {
-
-
+        Mockito.when(orderChecker.isFromBannedCustomer(validOrder)).thenReturn(true);
+        boolean result = orderChecker.isValidOrder(validOrder);
+        Assert.assertFalse(result);
+        Mockito.verify(orderChecker).isValidOrder(validOrder);
+        Mockito.verify(orderChecker).isProfitableSale(validOrder);
+        Mockito.verify(orderChecker).isFromBannedCustomer(validOrder);
+        Mockito.verifyNoMoreInteractions(orderChecker);
     }
-
-
-
 }

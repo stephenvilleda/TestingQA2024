@@ -44,9 +44,9 @@ public class HotelDataTest {
             PreparedStatement ps = connection.prepareStatement(insertSQL);
 
             LocalDate startDate = LocalDate.of(LocalDate.now().getYear(), 5, 1);
-            LocalDate endDate = LocalDate.of(LocalDate.now().getYear() + 2, 3, 30).minusDays(1);
+            LocalDate endDate = LocalDate.of(LocalDate.now().getYear(), 5, 4).minusDays(1);
 
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
             for (String chain : hotelChains) {
                 for (String city : cities) {
@@ -70,7 +70,7 @@ public class HotelDataTest {
                         }
 
                         try {
-                            List<WebElement> roomPrices = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#bodyconstraint-inner > div:nth-child(8) > div > div.af5895d4b2 > div.df7e6ba27d > div.bcbf33c5c3 > div.dcf496a7b9.bb2746aad9 > div.d4924c9e74 > div:nth-child(11) > div.c066246e13.d8aec464ca > div.c1edfbabcb > div > div > div:nth-child(2) > div > div:nth-child(2) > span > button > span")));
+                            List<WebElement> roomPrices = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#bodyconstraint-inner > div:nth-child(8) > div > div.a6e267116d > div > form > div > div.e22b782521.d12ff5f5bf > button")));
 
                             if (!roomPrices.isEmpty()) {
                                 int lowestPrice = roomPrices.stream()
